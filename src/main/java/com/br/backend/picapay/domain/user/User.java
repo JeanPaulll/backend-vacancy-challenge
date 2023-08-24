@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;
 
-@Info(author = "Jean Paul", date = "24/08/2023")
+@Info(author = "Jean Paul | jeanpaulwebb@gmail.com", date = "24/08/2023")
 @Entity(name = "users")
 @Table(name = "users")
 @Getter
