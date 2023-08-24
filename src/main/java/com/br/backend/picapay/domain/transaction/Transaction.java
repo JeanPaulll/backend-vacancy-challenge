@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Info(author = "Jean Paul", date = "24/08/2023")
 @Entity(name = "transactions")
@@ -22,8 +23,12 @@ public class Transaction {
     private BigDecimal amount;
 
     @ManyToOne
+    @JoinColumn(name="payer_id")
     private User payer;
 
     @ManyToOne
+    @JoinColumn(name="payee_id")
     private User payee;
+
+    private LocalDateTime timestamp;
 }
