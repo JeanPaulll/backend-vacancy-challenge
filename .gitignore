@@ -1,3 +1,4 @@
 ## ignoring target file
 target/
 .idea
+.DS_Store
