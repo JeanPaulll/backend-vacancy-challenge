@@ -1,4 +1,4 @@
-package com.br.backend.picapay;
+package com.br.backend.picpay;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.br.backend</groupId>
-	<artifactId>picapay</artifactId>
+	<artifactId>picpay</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Backend Vacancy Challenge</name>
 	<description>Desafio Back-end PicPay</description>

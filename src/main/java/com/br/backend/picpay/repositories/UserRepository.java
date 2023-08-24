@@ -1,7 +1,7 @@
-package com.br.backend.picapay.repositories;
+package com.br.backend.picpay.repositories;
 
-import com.br.backend.picapay.annotations.Info;
-import com.br.backend.picapay.domain.user.User;
+import com.br.backend.picpay.annotations.Info;
+import com.br.backend.picpay.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

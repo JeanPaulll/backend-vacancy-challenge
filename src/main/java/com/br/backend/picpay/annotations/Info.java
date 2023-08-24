@@ -1,4 +1,4 @@
-package com.br.backend.picapay.annotations;
+package com.br.backend.picpay.annotations;
 
 import java.lang.annotation.*;
 

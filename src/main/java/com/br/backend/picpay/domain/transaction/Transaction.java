@@ -1,7 +1,7 @@
-package com.br.backend.picapay.domain.transaction;
+package com.br.backend.picpay.domain.transaction;
 
-import com.br.backend.picapay.annotations.Info;
-import com.br.backend.picapay.domain.user.User;
+import com.br.backend.picpay.annotations.Info;
+import com.br.backend.picpay.domain.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 

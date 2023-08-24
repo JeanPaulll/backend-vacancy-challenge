@@ -1,6 +1,6 @@
-package com.br.backend.picapay.domain.user;
+package com.br.backend.picpay.domain.user;
 
-import com.br.backend.picapay.annotations.Info;
+import com.br.backend.picpay.annotations.Info;
 import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;
