@@ -44,21 +44,35 @@ public class TransactionService {
         if (!isAuthorized) {
             throw new Exception("Transação não autorizada!");
         }
-        execute(transactionDto, payee, payer);
-        updateToBalance(transactionDto, payer, payee);
+        Transaction transaction = this.execute(transactionDto, payee, payer);
+        this.updateToBalance(transactionDto, payer, payee);
+        this.save(transaction, payer, payee);
+    }
+
+    /**
+     * @param transaction
+     * @param payer
+     * @param payee
+     */
+    private void save(Transaction transaction, User payer, User payee) {
+        this.transactionRepository.save(transaction);
+        userService.saveUser(payer);
+        userService.saveUser(payee);
     }
 
     /**
      * @param transactionDto
      * @param payee
      * @param payer
+     * @return
      */
-    private static void execute(TransactionDto transactionDto, User payee, User payer) {
+    private Transaction execute(TransactionDto transactionDto, User payee, User payer) {
         Transaction transaction = new Transaction();
         transaction.setAmount(transactionDto.value());
         transaction.setPayee(payee);
         transaction.setPayer(payer);
         transaction.setTimestamp(LocalDateTime.now());
+        return transaction;
     }
 
     /**
@@ -66,7 +80,7 @@ public class TransactionService {
      * @param payer
      * @param payee
      */
-    private static void updateToBalance(TransactionDto transactionDto, User payer, User payee) {
+    private void updateToBalance(TransactionDto transactionDto, User payer, User payee) {
         payer.setBalance(payer.getBalance().subtract(transactionDto.value()));
         payee.setBalance(payee.getBalance().subtract(transactionDto.value()));
     }
