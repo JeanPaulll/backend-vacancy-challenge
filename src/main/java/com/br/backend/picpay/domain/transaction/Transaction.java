@@ -24,11 +24,11 @@ public class Transaction {
     private BigDecimal amount;
 
     @ManyToOne
-    @JoinColumn(name="payer_id")
+    @JoinColumn(name = "payer_id")
     private User payer;
 
     @ManyToOne
-    @JoinColumn(name="payee_id")
+    @JoinColumn(name = "payee_id")
     private User payee;
 
     private LocalDateTime timestamp;

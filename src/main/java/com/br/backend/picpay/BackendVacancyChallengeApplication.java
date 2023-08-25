@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BackendVacancyChallengeApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BackendVacancyChallengeApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BackendVacancyChallengeApplication.class, args);
+    }
 
 }

@@ -5,13 +5,12 @@ import com.br.backend.picpay.domain.transaction.Transaction;
 import com.br.backend.picpay.domain.user.User;
 import com.br.backend.picpay.dtos.TransactionDto;
 import com.br.backend.picpay.repositories.TransactionRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.core.env.Environment;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

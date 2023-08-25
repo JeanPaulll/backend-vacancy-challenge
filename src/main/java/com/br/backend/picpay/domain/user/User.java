@@ -1,6 +1,7 @@
 package com.br.backend.picpay.domain.user;
 
 import com.br.backend.picpay.annotations.Info;
+import com.br.backend.picpay.dtos.UserDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -35,4 +36,13 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     private UserType userType;
+
+    public User(UserDto userDto) {
+        this.setFirstName(userDto.firstName());
+        this.setLastName(userDto.lastName());
+        this.setEmail(userDto.email());
+        this.setPassword(userDto.password());
+        this.setFirstName(userDto.firstName());
+        this.setUserType(userDto.type());
+    }
 }

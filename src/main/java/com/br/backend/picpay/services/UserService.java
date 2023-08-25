@@ -3,11 +3,13 @@ package com.br.backend.picpay.services;
 import com.br.backend.picpay.annotations.Info;
 import com.br.backend.picpay.domain.user.User;
 import com.br.backend.picpay.domain.user.UserType;
+import com.br.backend.picpay.dtos.UserDto;
 import com.br.backend.picpay.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+
 @Info(author = "Jean Paul | jeanpaulwebb@gmail.com", date = "24/08/2023")
 @Service
 public class UserService {
@@ -44,5 +46,13 @@ public class UserService {
      */
     public User saveUser(User user) {
         return repository.save(user);
+    }
+
+    /**
+     * @param userDto
+     * @return
+     */
+    public User createUser(UserDto userDto) {
+        return this.saveUser(new User(userDto));
     }
 }
